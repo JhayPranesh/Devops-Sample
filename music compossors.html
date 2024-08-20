@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Music Composer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+        }
+        .button {
+            padding: 20px;
+            margin: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="button" onclick="playSound('sound1')">Play Sound 1</button>
+        <button class="button" onclick="playSound('sound2')">Play Sound 2</button>
+        <button class="button" onclick="playSound('sound3')">Play Sound 3</button>
+
+        <!-- Define audio elements -->
+        <audio id="sound1" src="sound1.mp3"></audio>
+        <audio id="sound2" src="sound2.mp3"></audio>
+        <audio id="sound3" src="sound3.mp3"></audio>
+    </div>
+
+    <script>
+        function playSound(soundId) {
+            var audioElement = document.getElementById(soundId);
+            audioElement.play();
+        }
+    </script>
+</body>
+</html>
